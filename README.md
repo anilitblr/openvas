@@ -38,8 +38,8 @@ vagrant --version;
 mv vagrant_2.2.18_x86_64.deb ../
 ```
 
-## Create Vagrantfile
----------------------
+### Create Vagrantfile
+
 
 ```bash
 cat <<EOF >Vagrantfile
@@ -49,24 +49,24 @@ end
 EOF
 ```
 
-## Boot vagrant box and ssh into it
------------------------------------
+### Boot vagrant box and ssh into it
+
 
 ```bash
 vagrant up;
 vagrant ssh;
 ```
 
-## Update Ubuntu
-----------------
+### Update Ubuntu
+
 
 ```bash
 sudo apt-get update;
 sudo apt-get upgrade;
 ```
 
-## Add OpenVAS repository to system
------------------------------------
+### Add OpenVAS repository to system
+
 
 ```bash
 sudo apt-get install software-properties-common;
@@ -74,30 +74,30 @@ sudo add-apt-repository ppa:mrazavi/openvas;
 sudo apt-get install openvas9 -y; # Note: Press <Yes> when you get the pop window.
 ```
 
-## Install sqlite3 for database
--------------------------------
+### Install sqlite3 for database
+
 
 ```bash
 sudo apt-get install sqlite3;
 ```
 
-## Enable pdf reports
----------------------
+### Enable pdf reports
+
 
 ```bash
 sudo apt-get install -y texlive-latex-extra --no-install-recommends;
 sudo apt-get install -y texlive-fonts-recommended;
 ```
 
-## Install openvas-nasl utility
--------------------------------
+### Install openvas-nasl utility
+
 
 ```bash
 sudo apt-get install -y libopenvas9-dev;
 ```
 
-## Download the Network Vulnerability
--------------------------------------
+### Download the Network Vulnerability
+
 
 - Run the commands below to download the Network Vulnerability, tests from OpenVAS Feed and sync security content automation protocol data and cert vulnerability data.
 -------------------------------------
@@ -108,8 +108,8 @@ sudo greenbone-scapdata-sync; # Please skip this command
 sudo greenbone-certdata-sync; # Please skip this command
 ```
 
-## Restart OpenVAS and OpenVAS Manager
---------------------------------------
+### Restart OpenVAS and OpenVAS Manager
+
 
 ```bash
 sudo service openvas-scanner restart;
@@ -117,47 +117,45 @@ sudo service openvas-manager restart;
 sudo service openvas-gsa restart;
 ```
 
-## Validate OpenVAS service
+### Validate OpenVAS service
 
 ```bash
 sudo service openvas-scanner status;
 ```
 
-## Rebuild the OpenVAS database
+### Rebuild the OpenVAS database
 
 ```bash
 sudo openvasmd --rebuild --progress;
 ```
 
-## Check the OpenVAS
---------------------
+### Check the OpenVAS
 
 ```browser
 curl --insecure https://localhost:4000
 ```
 
-## Open the dashboard in the web browser
-----------------------------------------
+### Open the dashboard in the web browser
+
 
 ```browser
 https://server.address.com:4000
 ```
 
-## Login credentials
---------------------
+### Login credentials
 
 - un: admin
 - pw: admin
 
 
-## Change the admin password
-----------------------------
+### Change the admin password
+
 
 ```bash
 sudo openvasmd --user=admin --new-password=admin@321
 ```
 
-## Private network
-------------------
+### Private network
+
 
 Will setup private network in Vagrant it self to avoid LAN. This way we could setup infrastructure fast and easy.
