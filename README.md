@@ -23,12 +23,10 @@
 
 ### Install VirtualBox and dependencies
 
-
 ```bash
 sudo apt-get install -y virtualbox virtualbox-dkms virtualbox-guest-additions-iso virtualbox-guest-dkms virtualbox-guest-source curl wget;
 ```
 ### Install vagrant
-
 
 ```bash
 mkdir -p ~/OpenVAS/vms && cd $_
@@ -40,7 +38,6 @@ mv vagrant_2.2.18_x86_64.deb ../
 
 ### Create Vagrantfile
 
-
 ```bash
 cat <<EOF >Vagrantfile
 Vagrant.configure("2") do |config|
@@ -51,7 +48,6 @@ EOF
 
 ### Boot vagrant box and ssh into it
 
-
 ```bash
 vagrant up;
 vagrant ssh;
@@ -59,14 +55,12 @@ vagrant ssh;
 
 ### Update Ubuntu
 
-
 ```bash
 sudo apt-get update;
 sudo apt-get upgrade;
 ```
 
 ### Add OpenVAS repository to system
-
 
 ```bash
 sudo apt-get install software-properties-common;
@@ -76,13 +70,11 @@ sudo apt-get install openvas9 -y; # Note: Press <Yes> when you get the pop windo
 
 ### Install sqlite3 for database
 
-
 ```bash
 sudo apt-get install sqlite3;
 ```
 
 ### Enable pdf reports
-
 
 ```bash
 sudo apt-get install -y texlive-latex-extra --no-install-recommends;
@@ -91,16 +83,13 @@ sudo apt-get install -y texlive-fonts-recommended;
 
 ### Install openvas-nasl utility
 
-
 ```bash
 sudo apt-get install -y libopenvas9-dev;
 ```
 
 ### Download the Network Vulnerability
 
-
 - Run the commands below to download the Network Vulnerability, tests from OpenVAS Feed and sync security content automation protocol data and cert vulnerability data.
--------------------------------------
 
 ```bash
 sudo greenbone-nvt-sync;      # Please skip this command
@@ -109,7 +98,6 @@ sudo greenbone-certdata-sync; # Please skip this command
 ```
 
 ### Restart OpenVAS and OpenVAS Manager
-
 
 ```bash
 sudo service openvas-scanner restart;
@@ -137,7 +125,6 @@ curl --insecure https://localhost:4000
 
 ### Open the dashboard in the web browser
 
-
 ```browser
 https://server.address.com:4000
 ```
@@ -150,12 +137,10 @@ https://server.address.com:4000
 
 ### Change the admin password
 
-
 ```bash
 sudo openvasmd --user=admin --new-password=admin@321
 ```
 
 ### Private network
 
-
-Will setup private network in Vagrant it self to avoid LAN. This way we could setup infrastructure fast and easy.
+- Will setup private network in Vagrant it self to avoid LAN. This way we could setup infrastructure fast and easy.
