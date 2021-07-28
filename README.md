@@ -22,13 +22,13 @@
   - [Private network](#private-network)
 
 ## Install VirtualBox and dependencies
---------------------------------------
+
 
 ```bash
 sudo apt-get install -y virtualbox virtualbox-dkms virtualbox-guest-additions-iso virtualbox-guest-dkms virtualbox-guest-source curl wget;
 ```
 ## Install vagrant
-------------------
+
 
 ```bash
 mkdir -p ~/OpenVAS/vms && cd $_
