@@ -14,20 +14,20 @@
   - [Download the Network Vulnerability](#download-the-network-vulnerability)
   - [Restart OpenVAS and OpenVAS Manager](#restart-openvas-and-openvas-manager)
   - [Validate OpenVAS service](#validate-openvas-service)
-  - [Rebuild the OpenVAS database](#rebuild-the-openvas-database-1)
+  - [Rebuild the OpenVAS database](#rebuild-the-openvas-database)
   - [Check the OpenVAS](#check-the-openvas)
   - [Open the dashboard in the web browser](#open-the-dashboard-in-the-web-browser)
   - [Login credentials](#login-credentials)
   - [Change the admin password](#change-the-admin-password)
   - [Private network](#private-network)
 
-## Install VirtualBox and dependencies
+### Install VirtualBox and dependencies
 
 
 ```bash
 sudo apt-get install -y virtualbox virtualbox-dkms virtualbox-guest-additions-iso virtualbox-guest-dkms virtualbox-guest-source curl wget;
 ```
-## Install vagrant
+### Install vagrant
 
 
 ```bash
