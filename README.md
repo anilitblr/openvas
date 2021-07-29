@@ -15,7 +15,6 @@
   - [Restart OpenVAS and OpenVAS Manager](#restart-openvas-and-openvas-manager)
   - [Validate OpenVAS service](#validate-openvas-service)
   - [Rebuild the OpenVAS database](#rebuild-the-openvas-database)
-  - [Check the OpenVAS](#check-the-openvas)
   - [Open the dashboard in the web browser](#open-the-dashboard-in-the-web-browser)
   - [Login credentials](#login-credentials)
   - [Change the admin password](#change-the-admin-password)
@@ -139,7 +138,8 @@ sudo openvasmd --rebuild --progress;
 
 ```browser
 curl --insecure https://localhost:4000
-``` -->
+``` 
+-->
 
 ### Open the dashboard in the web browser
 
