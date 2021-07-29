@@ -40,8 +40,15 @@ mv vagrant_2.2.18_x86_64.deb ../
 
 ```bash
 cat <<EOF >Vagrantfile
+# Vagrant config file created for OpenVAS.
+# Project on Ubuntu-18.04
 Vagrant.configure("2") do |config|
-  config.vm.box = "bento/ubuntu-18.04"
+ config.vm.define "openvas" do |openvas|
+  openvas.vm.provider "virtualbox"
+  openvas.vm.box = "bento/ubuntu-18.04"
+  openvas.vm.hostname = "openvas.example.com"
+  openvas.vm.network "public_network", bridge: "wlp2s0"
+ end
 end
 EOF
 ```
@@ -64,7 +71,7 @@ sudo apt-get upgrade;
 
 ```bash
 sudo apt-get install software-properties-common;
-sudo add-apt-repository ppa:mrazavi/openvas;
+sudo add-apt-repository ppa:mrazavi/openvas; # Hit enter when it prompts to continue.
 sudo apt-get install openvas9 -y; # Note: Press <Yes> when you get the pop window.
 ```
 
@@ -116,12 +123,12 @@ sudo service openvas-scanner status;
 ```bash
 sudo openvasmd --rebuild --progress;
 ```
-
-### Check the OpenVAS
+<!--
+### Check the OpenVAS from command line.
 
 ```browser
 curl --insecure https://localhost:4000
-```
+``` -->
 
 ### Open the dashboard in the web browser
 
