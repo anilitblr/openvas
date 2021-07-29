@@ -149,9 +149,10 @@ https://server.address.com:4000
 
 ### Login credentials
 
-- un: admin
-- pw: admin
-
+```bash
+username: admin
+password: admin
+```
 
 ### Change the admin password
 
