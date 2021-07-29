@@ -94,14 +94,25 @@ sudo apt-get install -y texlive-fonts-recommended;
 sudo apt-get install -y libopenvas9-dev;
 ```
 
+### Update the /etc/hosts file
+
+```bash
+sudo vim /etc/hosts
+
+# Add below line into hosts file.
+45.135.106.142 dl.greenbone.net
+
+Save and close the file
+```
+
 ### Download the Network Vulnerability
 
 - Run the commands below to download the Network Vulnerability, tests from OpenVAS Feed and sync security content automation protocol data and cert vulnerability data.
 
 ```bash
-sudo greenbone-nvt-sync;      # Please skip this command
-sudo greenbone-scapdata-sync; # Please skip this command
-sudo greenbone-certdata-sync; # Please skip this command
+sudo greenbone-nvt-sync;
+sudo greenbone-scapdata-sync;
+sudo greenbone-certdata-sync;
 ```
 
 ### Restart OpenVAS and OpenVAS Manager
@@ -145,7 +156,7 @@ https://server.address.com:4000
 ### Change the admin password
 
 ```bash
-sudo openvasmd --user=admin --new-password=admin@321
+sudo openvasmd --user=admin --new-password=new-pw
 ```
 
 ### Private network
