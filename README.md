@@ -110,7 +110,7 @@ Save and close the file
 - Run the commands below to download the Network Vulnerability, tests from OpenVAS Feed and sync security content automation protocol data and cert vulnerability data.
 
 ```bash
-sudo greenbone-nvt-sync;
+sudo greenbone-nvt-sync --rsync;
 sudo greenbone-scapdata-sync;
 sudo greenbone-certdata-sync;
 ```
