@@ -56,7 +56,7 @@ EOF
 
 ```bash
 vagrant up;
-vagrant ssh;
+vagrant ssh openvas;
 ```
 
 ### Update Ubuntu
@@ -107,6 +107,10 @@ Save and close the file
 ### Download the Network Vulnerability
 
 - Run the commands below to download the Network Vulnerability, tests from OpenVAS Feed and sync security content automation protocol data and cert vulnerability data.
+- Sometimes by the network issues, with the specified server, the data will not be downloaded. 
+- refer https://community.greenbone.net/t/how-to-use-feed-update-commands-for-greenbone-os/9330
+- In that sense, get the download in direct Ubuntu linux terminal.
+- In the Openvas terminal, do the scp copy to the relevant /var/lib/openvas/ from your Ubuntu linux terminal
 
 ```bash
 sudo greenbone-nvt-sync --rsync;
